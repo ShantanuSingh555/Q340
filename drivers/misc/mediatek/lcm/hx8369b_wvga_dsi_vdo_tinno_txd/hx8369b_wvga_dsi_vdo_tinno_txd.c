@@ -91,8 +91,6 @@ static struct LCM_setting_table lcm_compare_id_setting[] = {
 	{REGFLAG_END_OF_TABLE, 0x00, {}}
 };
 
-
-
 static void push_table(struct LCM_setting_table *table, unsigned int count, unsigned char force_update)
 {
 	unsigned int i;
@@ -118,12 +116,10 @@ static void push_table(struct LCM_setting_table *table, unsigned int count, unsi
 	
 }
 
-
 static void lcm_set_util_funcs(const LCM_UTIL_FUNCS *util)
 {
     memcpy(&lcm_util, util, sizeof(LCM_UTIL_FUNCS));
 }
-
 
 static void lcm_get_params(LCM_PARAMS *params)
 {
@@ -163,7 +159,6 @@ static void lcm_get_params(LCM_PARAMS *params)
 		params->dsi.PLL_CLOCK=210;
 }
 
-
 static void lcm_init(void)
 {
     SET_RESET_PIN(0);
@@ -176,6 +171,7 @@ static void lcm_init(void)
 extern void DSI_clk_ULP_mode(bool enter);
 
 static void lcm_suspend(void)
+{
     SET_RESET_PIN(0);
     MDELAY(20);
     SET_RESET_PIN(1);
@@ -195,7 +191,7 @@ static void lcm_resume(void)
 
 extern int IMM_GetOneChannelValue(int dwChannel, int data[4], int* rawdata);
 static unsigned int lcm_compare_id()
-    {
+{
         unsigned int id = 0;
         unsigned char buffer[2];
         unsigned int array[16];
@@ -249,7 +245,7 @@ static unsigned int lcm_compare_id()
             return 0;
         }
         
-    }
+}
 
 LCM_DRIVER hx8369b_wvga_dsi_vdo_tinno_txd_drv = 
 {
