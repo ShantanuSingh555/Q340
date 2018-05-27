@@ -12,7 +12,7 @@ nocol='\033[0m'
 export ARCH=arm
 export CROSS_COMPILE=$HOME/arm-eabi-4.8/bin/arm-eabi-
 export KBUILD_BUILD_USER="Yuvraj"
-export KBUILD_BUILD_HOST="Thestral"
+export KBUILD_BUILD_HOST="∆Thestral"
 
 compile_kernel()
 {
