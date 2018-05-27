@@ -1,7 +1,7 @@
 #!/bin/sh
 
 KERNEL_DIR=$PWD
-ZIMAGE=$KERNEL_DIR/arch/arm/boot/zImage
+ZIMAGE=$KERNEL_DIR/out/arch/arm/boot/zImage
 BUILD_START=$(date +"%s")
 blue='\033[0;34m'
 cyan='\033[0;36m'
@@ -14,7 +14,7 @@ export CROSS_COMPILE=$HOME/arm-eabi-4.8/bin/arm-eabi-
 export KBUILD_BUILD_USER="Yuvraj"
 export KBUILD_BUILD_HOST="Thestral"
 
-compile_kernel ()
+compile_kernel()
 {
 echo -e "$blue************************************************"
 echo "                     Compiling  kernel                  "
@@ -22,7 +22,7 @@ echo -e "***********************************************$nocol"
 mkdir -p out
 make Q340_defconfig O=out/
 make -j4 O=out/
-if ! [ -a $ZIMAGE ];
+if [ ! -e $ZIMAGE ]
 then
 echo -e "$red Kernel Compilation failed! Fix the errors! $nocol"
 exit 1
