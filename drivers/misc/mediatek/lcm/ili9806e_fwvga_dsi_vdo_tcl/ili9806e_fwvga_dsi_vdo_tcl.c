@@ -1,3 +1,6 @@
+/*
+ * Yuvraj Saxena Add at 2018
+ */
 #ifndef BUILD_LK
 #include <linux/string.h>
 #endif
@@ -87,61 +90,58 @@ static unsigned int lcm_compare_id(void);
 
 static struct LCM_setting_table lcm_initialization_setting[] =
 {
-	{0xFF,5,{0xFF,0x98,0x06,0x04,0x01}},      // Change to Page 1
-	{0x08,1,{0x10}},                 // output SDA
-	{0x21,1,{0x01}},                 // DE = 1 Active
-	{0x30,1,{0x01}},                 // 480 X 854
-	{0x31,1,{0x00}},                 // column
-	{0x40,1,{0x10}},               // BT
-	{0x41,1,{0x33}},                // DDVDH/DDVDL 
-	{0x42,1,{0x01}},                // VGH/VGL
-	{0x43,1,{0x09}},                // VGH_CP_OFF
-	{0x44,1,{0x09}},                // VGL_CP_OFF
+	{0xFF,5,{0xFF,0x98,0x06,0x04,0x01}},
+	{0x08,1,{0x10}},              
+	{0x21,1,{0x01}},          
+	{0x30,1,{0x01}},           
+	{0x31,1,{0x00}},             
+	{0x40,1,{0x10}},           
+	{0x41,1,{0x33}},              
+	{0x42,1,{0x01}},            
+	{0x43,1,{0x09}},             
+	{0x44,1,{0x09}},              
 	{0x50,1,{0x78}},  
 	{0x51,1,{0x78}}, 
-	{0x52,1,{0x00}},               // flicker MSB
-	{0x53,1,{0x6E}},              // flicker LSB   3A
-	{0x57,1,{0x50}},                // VREG2
-	{0x60,1,{0x07}},                 // SDTI
-	{0x61,1,{0x04}},                // CRTI 
-	{0x62,1,{0x07}},                 // EQTI
-	{0x63,1,{0x02}},                // PCTI
-
-	{0xA0,1,{0x00}}, // Gamma 0 
-	{0xA1,1,{0x0D}},  //0C 0d Gamma 4 
-	{0xA2,1,{0x11}},  //10 12 Gamma 8
-	{0xA3,1,{0x10}},  //0f Gamma 16
-	{0xA4,1,{0x04}},  // Gamma 24
-	{0xA5,1,{0x07}},  //08 Gamma 52
-	{0xA6,1,{0x05}},  // Gamma 80
-	{0xA7,1,{0x03}},  // Gamma 108
-	{0xA8,1,{0x07}},  // Gamma 147
-	{0xA9,1,{0x0A}},  // Gamma 175
-	{0xAA,1,{0x11}},  //12 Gamma 203
-	{0xAB,1,{0x07}},  // Gamma 231
-	{0xAC,1,{0x0C}},  // Gamma 239
-	{0xAD,1,{0x20}},  //1e Gamma 247
-	{0xAE,1,{0x16}},  //12 Gamma 251
-	{0xAF,1,{0x00}}, // Gamma 255  //10
-
-	{0xC0,1,{0x00}},  // Gamma 0 
-	{0xC1,1,{0x07}},  //05 06 Gamma 4
-	{0xC2,1,{0x0E}}, //0D 0f Gamma 8
-	{0xC3,1,{0x07}},  //07 Gamma 16
-	{0xC4,1,{0x03}},  // Gamma 24
-	{0xC5,1,{0x09}},  //0a Gamma 52
-	{0xC6,1,{0x06}},  // Gamma 80
-	{0xC7,1,{0x05}},  // Gamma 108
-	{0xC8,1,{0x08}},  // Gamma 147
-	{0xC9,1,{0x0C}},  // Gamma 175
-	{0xCA,1,{0x11}},  //12 Gamma 203
-	{0xCB,1,{0x08}},  // Gamma 231
-	{0xCC,1,{0x0F}},  // Gamma 239
-	{0xCD,1,{0x20}},  //1e Gamma 247
-	{0xCE,1,{0x1c}},  //18 Gamma 251	
-	{0xCF,1,{0x00}}, // Gamma 255  //5
-
-	{0xFF,5,{0xFF,0x98,0x06,0x04,0x06}},     // Change to Page 6
+	{0x52,1,{0x00}},             
+	{0x53,1,{0x6E}},            
+	{0x57,1,{0x50}},             
+	{0x60,1,{0x07}},              
+	{0x61,1,{0x04}},             
+	{0x62,1,{0x07}},              
+	{0x63,1,{0x02}},            
+	{0xA0,1,{0x00}}, 
+	{0xA1,1,{0x0D}}, 
+	{0xA2,1,{0x11}},  
+	{0xA3,1,{0x10}}, 
+	{0xA4,1,{0x04}},  
+	{0xA5,1,{0x07}},  
+	{0xA6,1,{0x05}}, 
+	{0xA7,1,{0x03}},  
+	{0xA8,1,{0x07}},  
+	{0xA9,1,{0x0A}},  
+	{0xAA,1,{0x11}}, 
+	{0xAB,1,{0x07}},  
+	{0xAC,1,{0x0C}}, 
+	{0xAD,1,{0x20}}, 
+	{0xAE,1,{0x16}}, 
+	{0xAF,1,{0x00}},
+	{0xC0,1,{0x00}}, 
+	{0xC1,1,{0x07}},  
+	{0xC2,1,{0x0E}}, 
+	{0xC3,1,{0x07}},  
+	{0xC4,1,{0x03}}, 
+	{0xC5,1,{0x09}}, 
+	{0xC6,1,{0x06}}, 
+	{0xC7,1,{0x05}},  
+	{0xC8,1,{0x08}},  
+	{0xC9,1,{0x0C}},  
+	{0xCA,1,{0x11}},  
+	{0xCB,1,{0x08}}, 
+	{0xCC,1,{0x0F}},  
+	{0xCD,1,{0x20}},  
+	{0xCE,1,{0x1c}},  
+	{0xCF,1,{0x00}}, 
+	{0xFF,5,{0xFF,0x98,0x06,0x04,0x06}},
 	{0x00,1,{0x23}},
 	{0x01,1,{0x0A}},
 	{0x02,1,{0x00}},    
@@ -204,20 +204,14 @@ static struct LCM_setting_table lcm_initialization_setting[] =
 	{0xB3,1,{0x10}},                
 	{0x02,1,{0x77}},     
 	{0x17,1,{0x22}},
-	{0xE1,1,{0x79}},  
-
-
-
-	{0xFF,5,{0xFF,0x98,0x06,0x04,0x00}},    // Change to Page 0
-	{0x35,1,{0x00}},                //TE on
-	{0x11,1,{0x00}},               // Sleep-Out	
+	{0xE1,1,{0x79}},
+	{0xFF,5,{0xFF,0x98,0x06,0x04,0x00}},
+	{0x35,1,{0x00}},             
+	{0x11,1,{0x00}},              	
 	{REGFLAG_DELAY, 120, {}},
-	{0x29,1,{0x00}},               // Display On	
+	{0x29,1,{0x00}},
 	{REGFLAG_DELAY, 10, {}},
-		 // Note
-	 // Strongly recommend not to set Sleep out / Display On here. That will cause messed frame to be shown as later the backlight is on.
-	 // Setting ending by predefined flag
-    {REGFLAG_END_OF_TABLE, 0x00, {}}
+        {REGFLAG_END_OF_TABLE, 0x00, {}}
 };
 
 
@@ -228,24 +222,18 @@ static struct LCM_setting_table lcm_set_window[] = {
 };
 
 static struct LCM_setting_table lcm_sleep_out_setting[] = {
-	//Normal mode on
 	{0x13, 1, {0x00}},
 	{REGFLAG_DELAY,20,{}},
-    // Sleep Out
 	{0x11, 1, {0x00}},
-    {REGFLAG_DELAY, 120, {}},
-    // Display ON
+        {REGFLAG_DELAY, 120, {}},
 	{0x29, 1, {0x00}},
 	{REGFLAG_END_OF_TABLE, 0x00, {}}
 	
 };
 
 static struct LCM_setting_table lcm_deep_sleep_mode_in_setting[] = {
-	// Display off sequence
 	{0x28, 1, {0x00}},
 	{REGFLAG_DELAY, 50, {}},
-
-    // Sleep Mode On
 	{0x10, 1, {0x00}},
 	{REGFLAG_DELAY, 20, {}},
 	{REGFLAG_END_OF_TABLE, 0x00, {}}
@@ -258,10 +246,8 @@ static struct LCM_setting_table lcm_backlight_level_setting[] = {
 };
 
 static struct LCM_setting_table lcm_compare_id_setting[] = {
-
 	{0xD3,	3,	{0xFF, 0x83, 0x79}},
 	{REGFLAG_DELAY, 10, {}}, 	
-
 	{REGFLAG_END_OF_TABLE, 0x00, {}}
 };
 
@@ -343,17 +329,10 @@ static void lcm_get_params(LCM_PARAMS *params)
 		params->dsi.PS=LCM_PACKED_PS_24BIT_RGB888;
 		params->dsi.word_count=480*3;
 
- //edit by Magnum 2013-7-25 , solve esd read id error
-	//	 cycle_time = (4 * 1000 * div2 * div1 * pre_div * post_div)/ (fbk_sel * (fbk_div+0x01) * 26) + 
-	// 1 = 
-  // ui = (1000 * div2 * div1 * pre_div * post_div)/ (fbk_sel * (fbk_div+0x01) * 26 * 2) + 1;
-		
-		
 		params->dsi.vertical_sync_active				= 5;
 		params->dsi.vertical_backporch					= 8;
 		params->dsi.vertical_frontporch					= 8;
 		params->dsi.vertical_active_line				= FRAME_HEIGHT; 
-			//params->dsi.vertical_active_line				= 800; 
 
 		params->dsi.horizontal_sync_active				= 8;
 		params->dsi.horizontal_backporch				= 50;
@@ -361,24 +340,17 @@ static void lcm_get_params(LCM_PARAMS *params)
 		params->dsi.horizontal_active_pixel				= FRAME_WIDTH;
 		params->dsi.compatibility_for_nvk = 0;	
 
-		params->dsi.pll_div1=1;		// div1=0,1,2,3;div1_real=1,2,4,4 ----0: 546Mbps  1:273Mbps
-		params->dsi.pll_div2=1;		// div2=0,1,2,3;div1_real=1,2,4,4	
-		params->dsi.fbk_div =31;    // fref=26MHz, fvco=fref*(fbk_div+1)*2/(div1_real*div2_real)	
-
-		/* ESD or noise interference recovery For video mode LCM only. */
-		// Send TE packet to LCM in a period of n frames and check the response.
-	/*	params->dsi.lcm_int_te_monitor = FALSE;
-		params->dsi.lcm_int_te_period = 1;		// Unit : frames
-
-		// Need longer FP for more opportunity to do int. TE monitor applicably.
-		if(params->dsi.lcm_int_te_monitor)
-			params->dsi.vertical_frontporch *= 2;
+		params->dsi.pll_div1=1;
+		params->dsi.pll_div2=1;
+		params->dsi.fbk_div =31;
 		
-		// Monitor external TE (or named VSYNC) from LCM once per 2 sec. (LCM VSYNC must be wired to baseband TE pin.)
+		if(params->dsi.lcm_int_te_monitor) {
+			params->dsi.vertical_frontporch *= 2;
+		}
+
 		params->dsi.lcm_ext_te_monitor = FALSE;
-		// Non-continuous clock
 		params->dsi.noncont_clock = TRUE;
-		params->dsi.noncont_clock_period = 2;	// Unit : frames  */
+		params->dsi.noncont_clock_period = 2;
 }
 
 static void lcm_init(void)
@@ -513,18 +485,12 @@ static unsigned int lcm_compare_id(void)
 
 LCM_DRIVER ili9806e_fwvga_dsi_vdo_tcl_lcm_drv = 
 {
-    .name			= "ili9806e_fwvga_dsi_vdo_tcl",
+        .name		= "ili9806e_fwvga_dsi_vdo_tcl",
 	.set_util_funcs = lcm_set_util_funcs,
 	.get_params     = lcm_get_params,
 	.init           = lcm_init,
 	.suspend        = lcm_suspend,
 	.resume         = lcm_resume,
-	.compare_id    = lcm_compare_id,
-	//.esd_check	 = lcm_esd_check,
-	//.esd_recover   = lcm_esd_recover,
-#if (LCM_DSI_CMD_MODE)
-	.set_backlight	= lcm_setbacklight,
-    .update         = lcm_update,
-#endif
+	.compare_id     = lcm_compare_id,
 };
 
