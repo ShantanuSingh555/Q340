@@ -4,6 +4,7 @@ os:
 - linux
 
 before_install:
+- sudo apt update && sudo apt install curl
 - git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 $HOME/arm-eabi-4.8
 
 script:
@@ -12,3 +13,4 @@ script:
 after_success:
 - cd out/arch/arm/boot
 - zip -r Q340.zip zImage
+- curl --upload-file Q340.zip https://transfer.sh
