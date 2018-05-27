@@ -42,7 +42,6 @@
 
 extern void Tinno_set_HS_read();
 extern void Tinno_restore_HS_read();
-//static unsigned int lcm_adc_read_chip_id();
 
 #ifndef TRUE
     #define   TRUE     1
@@ -366,6 +365,12 @@ static struct LCM_setting_table read_protect[] = {
        {0xB0,1,{0x03}},
 };
 
+#ifndef BUILD_LK
+static unsigned int check_display_normal(void)
+{
+	return 1;
+}
+
 static unsigned int lcm_esd_check(void)
 {
 	if(esdSwitch == 0){
@@ -379,6 +384,7 @@ static unsigned int lcm_esd_check(void)
 	return 1;
 
 }
+#endif
 
 static void lcm_resume(void)
 {
