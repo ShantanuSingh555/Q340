@@ -1,0 +1,14 @@
+sudo: required
+language: c
+os:
+- linux
+
+before_install:
+- git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 $HOME/arm-eabi-4.8
+
+script:
+- ./build.sh
+
+after_success:
+- cd out/arch/arm/boot
+- zip -r Q340.zip zImage
