@@ -477,12 +477,12 @@ config MTK_GT9XX
         bool "GT9XX for Mediatek package"
         default n
 
-config MTK_GT9XX_Q340
-        bool "GT9XX_Q340 for Mediatek package"
+config MTK_GT9XX_S5222
+        bool "GT9XX_S5222 for Mediatek package"
         default n
 
-config MTK_EKTF2K_Q340
-        bool "EKTF2K_Q340 for Mediatek package"
+config MTK_EKTF2K_S5222
+        bool "EKTF2K_S5222 for Mediatek package"
         default n
       
 config MTK_MMS244
