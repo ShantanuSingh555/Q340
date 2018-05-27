@@ -20,7 +20,7 @@ echo -e "$blue************************************************"
 echo "                     Compiling  kernel                  "
 echo -e "***********************************************$nocol"
 mkdir -p out
-make Q340_defconfig O=out/
+make Q372_defconfig O=out/
 make -j4 O=out/
 if [ ! -e $ZIMAGE ]
 then
