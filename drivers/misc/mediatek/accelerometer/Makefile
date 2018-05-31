@@ -53,9 +53,6 @@ ifeq ($(CONFIG_MTK_BMA250E),y)
 obj-y   +=  bma250e/
 endif
 
-
-#guomingyi-2014-1214-add-start.
 ifeq ($(CONFIG_MTK_KXTJ2_1009),y)
 obj-y   +=  KXTJ2_1009/
 endif
-#guomingyi-2014-1214-add-end.
