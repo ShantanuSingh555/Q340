@@ -12,5 +12,5 @@ script:
 
 after_success:
 - cd out/arch/arm/boot
-- zip -r Q340.zip zImage
-- curl --upload-file Q340.zip https://transfer.sh
+- zip -r a107.zip zImage
+- curl --upload-file a107.zip https://transfer.sh
