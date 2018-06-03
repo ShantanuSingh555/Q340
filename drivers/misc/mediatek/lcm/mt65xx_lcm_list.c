@@ -208,7 +208,7 @@ extern LCM_DRIVER otm1283a_hd720_dsi_vdo_lcm_drv_boe; // by zhangxian added line
 extern LCM_DRIVER ea8061v_dsi_vdo_lcm_drv_amoled; // by zhangxian added line
 //yixuhong 20141216 add for 5301 lcm driver
 extern LCM_DRIVER hx8379c_fwvga_dsi_vdo_tcl_lcm_drv;
-extern LCM_DRIVER ili9806e_fwvga_dsi_vdo_txd_lcm_drv;
+extern LCM_DRIVER ili9806e_fwvga_dsi_vdo_txd_aw619_lcm_drv;
 extern LCM_DRIVER otm8018b_fwvga_dsi_vdo_boe_lcm_drv;
 //zhangdognfang add 20141213
 extern LCM_DRIVER hx8394a_dsi_vdo_lcm_drv;
@@ -224,8 +224,8 @@ LCM_DRIVER* lcm_driver_list[] =
 		&hx8379c_fwvga_dsi_vdo_tcl_lcm_drv,
 #endif
 	
-#if defined(ILI9806E_FWVGA_DSI_VDO_TXD)
-		&ili9806e_fwvga_dsi_vdo_txd_lcm_drv,
+#if defined(ILI9806E_FWVGA_DSI_VDO_TXD_AW619)
+		&ili9806e_fwvga_dsi_vdo_txd_aw619_lcm_drv,
 #endif
 	
 #if defined(OTM8018B_FWVGA_DSI_VDO_BOE)

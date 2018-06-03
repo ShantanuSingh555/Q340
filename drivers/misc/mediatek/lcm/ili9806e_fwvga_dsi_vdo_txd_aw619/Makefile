@@ -3,7 +3,7 @@
 #
 include $(srctree)/drivers/misc/mediatek/Makefile.custom
 
-obj-y += otm8019a_fwvga_dsi_vdo_boe.o
+obj-y += ili9806e_fwvga_dsi_vdo_txd_aw619.o
 
 
 
